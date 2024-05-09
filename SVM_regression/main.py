@@ -109,21 +109,21 @@ plt.show()
 best_params = reg.best_params_
 MSE = mean_squared_error(y_test, y_pred)
 MAE = mean_absolute_error(y_test, y_pred)
+min_val, max_val = 0, 100
+accuracy = 1 - (MSE / ((max_val - min_val) ** 2))
 print('_________________________________')
 print('\nMean squared error:', MSE, '\n')
 print('\nMean absolute error: ', MAE, '\n')
+print('\nEquivalent Accuracy:', accuracy, '\n')
 print('_________________________________')
 print('\nBest model parameters: ', best_params, '\n')
 print('_________________________________')
 
-
 # evaluating classification model
-
 # accuracy = accuracy_score(y_test, y_pred)
 # f1_score = f1_score(y_test, y_pred, average='macro')
 # recall = recall_score(y_test, y_pred)
 # precision = precision_score(y_test, y_pred)
-#
 # print('\nModel accuracy: ', accuracy, '\n')
 # print('\nF1 score: ', f1_score, '\n')
 # print('\nRecall score: ', recall, '\n')
